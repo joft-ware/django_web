@@ -1,3 +1,4 @@
+
 """
 Django settings for pin project.
 
@@ -12,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
-import environ, os
+import os,environ
 
 env = environ.Env(
     # set casting, default value
@@ -22,8 +23,18 @@ env = environ.Env(
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+# 이거 추가함
+STATIC_URL = '/static/'
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join('/pin/', 'static'),
+)
+#
+
+
 environ.Env.read_env(
-    env_files=os.path.join(BASE_DIR, '.env')
+    env_file=os.path.join(BASE_DIR, '.env')
 )
 
 
@@ -129,5 +140,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
