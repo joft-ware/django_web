@@ -4,7 +4,9 @@
             <h1 class="logo"> JOFTWARE </h1>
         </div>
         <div>
-            <span> Articles |</span>
+            <a href="{% url 'articleapp:list' %}">
+                <span>Articles</span>
+            </a>
             <span> Projects |</span>
             <span> Subscriptions |</span>
             {% if not user.is_authenticated %}
