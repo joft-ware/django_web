@@ -1,0 +1,15 @@
+.logo {
+    font-family: 'Redressed', cursive;
+}
+
+.footer_button {
+    font-size: 1rem;
+}
+
+.footer{
+    text-align:center; margin-top:2rem;
+}
+
+.header{
+    text-align:center; margin:2rem 0;
+}
