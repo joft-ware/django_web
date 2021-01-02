@@ -9,7 +9,10 @@
             <span>nav3</span>
             {% if not user.is_authenticated %}
             <a href="{% url 'accountapp:login' %}?next={{request.path}}">
-                <span>login</span>
+                <span>Log in</span>
+            </a>
+            <a href="{% url 'accountapp:create' %}">
+                <span>Sign up</span>
             </a>
             {% else %}
             <a href="{% url 'accountapp:detail' pk=user.pk %}">
