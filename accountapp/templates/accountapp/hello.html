@@ -18,10 +18,12 @@
             </div>
             </form>
 
-            {% if hello_world_output %}
-            <h1>
-                {{ hello_world_output.text}}
-            </h1>
+            {% if hwlist %}
+                {% for w in hwlist %}
+                <h4>
+                    {{w.text}}
+                </h4>
+                {% endfor %}
             {% endif %}
     </div>
 
