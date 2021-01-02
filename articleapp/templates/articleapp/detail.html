@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 
 <div>
@@ -29,6 +30,8 @@
         </a>
         {% endif %}
 <hr>
+
+        {% include 'commentapp/create.html' with article=target_article %}
     </div>
 </div>
 
