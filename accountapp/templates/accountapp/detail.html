@@ -10,6 +10,19 @@
         <p>
             {{target_user.date_joined}}
         </p>
+
+        {% if target_user.profile %}
+        <h2 style="font-family: 'NanumBarunpenB'">
+            {{target_user.profile.nickname}}
+        </h2>
+        {% else %}
+        <a href="{% url 'profileapp:create' %}">
+            <h2 style="font-family: 'NanumBarunpenB'">
+                Create Profile
+            </h2>
+        </a>
+        {% endif %}
+
         <h2 style="font-family: 'NanumBarunpenB'">
             {{target_user.username}}
         </h2>
