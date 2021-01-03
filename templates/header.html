@@ -11,7 +11,9 @@
                 <span>Projects |</span>
             </a>
 
-            <span> Subscriptions |</span>
+            <a href="{% url 'subscribeapp:list' %}" >
+                <span>Subscriptions |</span>
+            </a>
             {% if not user.is_authenticated %}
             <a href="{% url 'accountapp:login' %}?next={{request.path}}" style="color:black; text-decoration: none;">
                 <span>Log in |</span>

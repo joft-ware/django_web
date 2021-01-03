@@ -19,7 +19,7 @@
         <h2 style="font-family: 'NanumBarunpenB'">
             {{target_user.profile.nickname}}
             {% if target_user == user %}
-            <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+            <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}" class="btn-primary rounded-pill ">
                 edit
             </a>
             {% endif %}
