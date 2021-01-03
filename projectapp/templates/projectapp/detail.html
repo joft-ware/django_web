@@ -21,12 +21,12 @@
         {% if user.is_authenticated %}
         {% if not subscription %}
         <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-        class="btn btn-primary rounded-pill px-4">
+        class="btn btn-primary rounded-pill px-4" style="box-shadow: 0 0 200px #ccc; margin-bottom:45px">
             Subscribe
         </a>
         {% else %}
         <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-        class="btn btn-dark rounded-pill px-4">
+        class="btn btn-dark rounded-pill px-4" style="box-shadow: 0 0 200px #ccc; margin-bottom:45px">
             Unsubscribe
         </a>
         {% endif %}

@@ -14,12 +14,14 @@
 
         {% if target_user.profile %}
         <img src="{{ target_user.profile.image.url}}"alt=""
-             style="height:12rem;width:12rem;border-radius: 20rem; margin-bottom:2rem; object-fit:cover;">
+             style="height:12rem;width:12rem;border-radius: 20rem; margin-bottom:2rem; object-fit:cover;
+box-shadow: 0 0 20px #ccc;">
 
         <h2 style="font-family: 'NanumBarunpenB'">
             {{target_user.profile.nickname}}
             {% if target_user == user %}
-            <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}" class="btn-primary rounded-pill ">
+            <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}" class="material-icons"
+            style = "box-shadow: 0 0 4px #ccc; boder-radius:10rem; padding: .4rem;">
                 edit
             </a>
             {% endif %}
@@ -44,15 +46,15 @@
 
 
         {% if target_user == user %}
-        <a href="{% url 'accountapp:update' pk=user.pk %}">
-            <p>
-                Change Info
-            </p>
+        <a class="material-icons"
+           style = "box-shadow: 0 0 4px #ccc; boder-radius:10rem; padding: .4rem;"
+           href="{% url 'accountapp:update' pk=user.pk %}">
+                settings
         </a>
-        <a href="{% url 'accountapp:delete' pk=user.pk %}">
-            <p>
-                Quit
-            </p>
+        <a href="{% url 'accountapp:delete' pk=user.pk %}"
+           class="material-icons"
+           style = "box-shadow: 0 0 4px #fcc; boder-radius:10rem; padding: .4rem;">
+                cancel
         </a>
         {% endif %}
 
