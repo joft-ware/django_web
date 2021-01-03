@@ -13,7 +13,8 @@
 
 
         {% if target_user.profile %}
-        <img src="{{ target_user.profile.image.url}}"alt="" style="height:12rem;width:12rem;border-radius: 20rem; margin-bottom:2rem;">
+        <img src="{{ target_user.profile.image.url}}"alt=""
+             style="height:12rem;width:12rem;border-radius: 20rem; margin-bottom:2rem; object-fit:cover;">
 
         <h2 style="font-family: 'NanumBarunpenB'">
             {{target_user.profile.nickname}}

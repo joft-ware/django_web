@@ -3,24 +3,27 @@
         <div>
             <h1 class="logo"> JOFTWARE </h1>
         </div>
-        <div>
-            <a href="{% url 'articleapp:list' %}">
-                <span>Articles</span>
+        <div style="margin: 1rem 1rem;">
+            <a href="{% url 'articleapp:list' %}" style="color:black; text-decoration: none;">
+                <span>Articles |</span>
             </a>
-            <span> Projects |</span>
+            <a href="{% url 'projectapp:list' %}" style="color:black; text-decoration: none;">
+                <span>Projects |</span>
+            </a>
+
             <span> Subscriptions |</span>
             {% if not user.is_authenticated %}
-            <a href="{% url 'accountapp:login' %}?next={{request.path}}">
+            <a href="{% url 'accountapp:login' %}?next={{request.path}}" style="color:black; text-decoration: none;">
                 <span>Log in |</span>
-            <a href="{% url 'accountapp:create' %}">
+            <a href="{% url 'accountapp:create' %}" style="color:black; text-decoration: none;">
                 <span>Sign up</span>
             </a>
             {% else %}
-            <a href="{% url 'accountapp:detail' pk=user.pk %}">
+            <a href="{% url 'accountapp:detail' pk=user.pk %}" style="color:black; text-decoration: none;">
                 <span>My page |</span>
             </a>
 
-            <a href="{% url 'accountapp:logout' %}?next={{request.path}}">
+            <a href="{% url 'accountapp:logout' %}?next={{request.path}}" style="color:black; text-decoration: none;">
                 <span>logout</span>
             </a>
             {% endif %}

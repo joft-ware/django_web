@@ -5,6 +5,14 @@
 .footer_button {
     font-size: 1rem;
 }
+.a {
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
 
 .footer{
     text-align:center; margin-top:2rem;
@@ -12,4 +20,10 @@
 
 .header{
     text-align:center; margin:2rem 0;
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 13px;
+    }
 }
