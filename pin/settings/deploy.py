@@ -1,11 +1,13 @@
 from .base import*
 
+
 def read_secret(secret):
     file = open('/run/secrets/' + secret)
     s = file.read()
     s = s.rstrip().lstrip()
     file.close()
     return s
+
 
 env = environ.Env(
     # set casting, default value
@@ -25,7 +27,7 @@ environ.Env.read_env(
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = read_secret('DJANGO_SECRET_KEY')
+SECRET_KEY = "-5s12kt3piui3lk0iwnm$3!9a^^tp2j#9402kg3ww@9k#g9yh="
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
